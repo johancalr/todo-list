@@ -1,8 +1,10 @@
+import { ListGroup } from "react-bootstrap";
+
 function TodoList(props) {
   return (
-    <ul>
+    <ListGroup className="mx-1 my-2 mx-md-4">
       {props.children}
-    </ul>
+    </ListGroup>
   );
 }
 

@@ -1,10 +1,20 @@
+import { Button, Col, Form, ListGroup, Row } from "react-bootstrap";
+
 function TodoItem(props) {
   return (
-    <li>
-      <span>V</span>
-      <p>{props.text}</p>
-      <span>X</span>
-    </li>
+    <ListGroup.Item action variant="light">
+      <Row>
+        <Col className="col-auto">
+          <Form.Check></Form.Check>
+        </Col>
+        <Col>
+          <small>{props.text}</small>
+        </Col>
+        <Col className="col-auto">
+          <Button size="sm" className="py-0" variant="danger">X</Button>
+        </Col>
+      </Row>
+    </ListGroup.Item>
   );
 }
 
