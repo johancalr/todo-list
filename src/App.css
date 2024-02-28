@@ -13,6 +13,9 @@
 .text-mint {
   color: #8befc0;
 }
+.text-pink {
+  color: #f23c70;
+}
 .bg-nature {
   background-color: #aae016;
 }
@@ -27,4 +30,14 @@
 }
 .bg-mint {
   background-color: #8befc0
+}
+.bg-pink {
+  background-color: #f23c70;
+}
+/* Modification for bootstrap */
+.form-check-input {
+  margin-top: 0;
+}
+.cursor-auto {
+  cursor: auto !important;
 }
