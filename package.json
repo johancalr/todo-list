@@ -2,8 +2,11 @@
   "name": "platzi-intro-react-base",
   "version": "0.1.0",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "react": "^18",
+    "react-bootstrap": "^2.10.1",
     "react-dom": "^18",
+    "react-icons": "^5.0.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
