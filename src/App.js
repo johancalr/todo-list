@@ -42,6 +42,20 @@ function App() {
     return todoText.includes(searchText);
   });
 
+  const completeTodo = (todoId) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.id === todoId);
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (todoId) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.id === todoId);
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <div className='container-fluid pt-3'>
       <Card>
@@ -68,6 +82,8 @@ function App() {
               key={todo.id}
               text={todo.text}
               completed={todo.completed}
+              onCompleted={() => completeTodo(todo.id)}
+              onDelete={() => deleteTodo(todo.id)}
             />
           ))}
         </TodoList>

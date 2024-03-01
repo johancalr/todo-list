@@ -6,7 +6,11 @@ function TodoItem(props) {
     <ListGroup.Item action variant="success" as="div">
       <Row>
         <Col className="col-auto fs-4 lh-1">
-          <Form.Check role="button" defaultChecked={props.completed}></Form.Check>
+          <Form.Check
+            role="button"
+            defaultChecked={props.completed}
+            onClick={props.onCompleted}
+          ></Form.Check>
         </Col>
         <Col>
           <span>{props.text}</span>
@@ -16,9 +20,7 @@ function TodoItem(props) {
             size="sm"
             className="py-0 px-1 lh-1 bg-pink border-0"
             variant="danger"
-            onClick={(event) => {
-              console.log(`Delete "${props.text}"`);
-            }}>
+            onClick={props.onDelete}>
             <TiDeleteOutline className="fs-4" />
           </Button>
         </Col>
