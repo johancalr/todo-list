@@ -3,16 +3,22 @@ import { TiDeleteOutline } from "react-icons/ti";
 
 function TodoItem(props) {
   return (
-    <ListGroup.Item action variant="success" className="cursor-auto">
+    <ListGroup.Item action variant="success" as="div">
       <Row>
         <Col className="col-auto fs-4 lh-1">
-          <Form.Check role="button"></Form.Check>
+          <Form.Check role="button" defaultChecked={props.completed}></Form.Check>
         </Col>
         <Col>
           <span>{props.text}</span>
         </Col>
         <Col className="col-auto">
-          <Button size="sm" className="py-0 px-1 lh-1 bg-pink border-0" variant="danger">
+          <Button
+            size="sm"
+            className="py-0 px-1 lh-1 bg-pink border-0"
+            variant="danger"
+            onClick={(event) => {
+              console.log(`Delete "${props.text}"`);
+            }}>
             <TiDeleteOutline className="fs-4" />
           </Button>
         </Col>
