@@ -7,7 +7,7 @@ import { TodoItem }    from './TodoItem';
 import { TodoCreate }  from './TodoCreate';
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
-import { todoItem } from './todoInterface.ts';
+// import { todoItem } from './todoInterface.ts';
 
 /*const defaultTodos = [
   { id: 1, text: 'Cortar cebolla', completed: false },
@@ -16,16 +16,25 @@ import { todoItem } from './todoInterface.ts';
   { id: 4, text: 'Renunciar a la chamba', completed: true }
 ];*/
 
-const defaultTodos = [
+/* const defaultTodos = [
   new todoItem(1, 'Cortar cebolla',          false),
   new todoItem(2, 'Tomar curso de React Js', true),
   new todoItem(3, 'Llorar con la llorona',   false),
   new todoItem(4, 'Renunciar a la chamba',   true),
   new todoItem(5, 'Graduarme',               false),
   new todoItem(6, 'Cantar una canción',      false)
-];
+]; */
+
+// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
+// localStorage.removeItem(defaultTodos);
 
 function App() {
+  const localStorageTodos = localStorage.getItem('TODOS_V1');
+  const parsedTodos       = JSON.parse(localStorageTodos)??[];
+  if (!localStorageTodos) {
+    localStorage.setItem('TODOS_V1', '[]');
+  }
+  const defaultTodos      = parsedTodos??[];
   // Estados
   const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState('');
@@ -46,14 +55,19 @@ function App() {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex((todo) => todo.id === todoId);
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   const deleteTodo = (todoId) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex((todo) => todo.id === todoId);
     newTodos.splice(todoIndex, 1);
+    saveTodos(newTodos);
+  };
+
+  const saveTodos = (newTodos) => {
     setTodos(newTodos);
+    localStorage.setItem('TODOS_V1', JSON.stringify(newTodos));
   };
 
   return (
