@@ -7,7 +7,8 @@ import { TodoItem }    from './TodoItem';
 import { TodoCreate }  from './TodoCreate';
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
-// import { todoItem } from './todoInterface.ts';
+import { todoItem } from './todoInterface.ts';
+import { TodoReset } from './TodoReset.js';
 
 /*const defaultTodos = [
   { id: 1, text: 'Cortar cebolla', completed: false },
@@ -16,14 +17,16 @@ import { Card, Row, Col } from 'react-bootstrap';
   { id: 4, text: 'Renunciar a la chamba', completed: true }
 ];*/
 
-/* const defaultTodos = [
-  new todoItem(1, 'Cortar cebolla',          false),
-  new todoItem(2, 'Tomar curso de React Js', true),
-  new todoItem(3, 'Llorar con la llorona',   false),
-  new todoItem(4, 'Renunciar a la chamba',   true),
-  new todoItem(5, 'Graduarme',               false),
-  new todoItem(6, 'Cantar una canción',      false)
-]; */
+const getOriginal = () => {
+  return [
+    new todoItem(1, 'Cortar cebolla',          false),
+    new todoItem(2, 'Tomar curso de React Js', true),
+    new todoItem(3, 'Llorar con la llorona',   false),
+    new todoItem(4, 'Renunciar a la chamba',   true),
+    new todoItem(5, 'Graduarme',               false),
+    new todoItem(6, 'Cantar una canción',      false)
+  ];
+}
 
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 // localStorage.removeItem(defaultTodos);
@@ -70,6 +73,10 @@ function App() {
     localStorage.setItem('TODOS_V1', JSON.stringify(newTodos));
   };
 
+  const resetTodos = () => {
+    saveTodos(getOriginal());
+  };
+
   return (
     <div className='container-fluid pt-3'>
       <Card>
@@ -85,8 +92,13 @@ function App() {
               setSearchValue={setSearchValue}
             />
           </Col>
-          <Col className='col-3 mt-2' md="auto">
+          <Col className='col-6 mt-2' md="auto">
             <TodoCreate />
+          </Col>
+          <Col className='col-6 mt-2' md="auto">
+            <TodoReset
+              onReset={() => resetTodos()}
+            />
           </Col>
         </Row>
 

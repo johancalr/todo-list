@@ -1,13 +1,16 @@
 import { Button } from "react-bootstrap";
+import { IoMdAdd } from "react-icons/io";
 
 function TodoCreate() {
   return (
     <Button
-      className="w-100"
+      className="w-100 d-flex justify-content-center fs-4 text-white"
       onClick={(event) => {
         console.log('Create');
       }}
-    >Crear</Button>
+    >
+      <IoMdAdd />
+    </Button>
   );
 }
 
