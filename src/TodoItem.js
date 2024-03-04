@@ -8,8 +8,8 @@ function TodoItem(props) {
         <Col className="col-auto fs-4 lh-1">
           <Form.Check
             role="button"
-            defaultChecked={props.completed}
-            onClick={props.onCompleted}
+            checked={!!props.completed}
+            onChange={props.onCompleted}
           ></Form.Check>
         </Col>
         <Col>
