@@ -31,15 +31,35 @@ const getOriginal = () => {
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 // localStorage.removeItem(defaultTodos);
 
-function App() {
-  const localStorageTodos = localStorage.getItem('TODOS_V1');
-  const parsedTodos       = JSON.parse(localStorageTodos)??[];
-  if (!localStorageTodos) {
-    localStorage.setItem('TODOS_V1', '[]');
+function useLocalStorage(itemName, initialValue) {
+
+  const localStorageItem = localStorage.getItem(itemName);
+  const parsedItem       = JSON.parse(localStorageItem)??initialValue;
+  if (!localStorageItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
   }
-  const defaultTodos      = parsedTodos??[];
+
+  const [item, setItem] = React.useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    setItem(newItem);
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+  };
+
+  const resetItem = (originalValue) => {
+    saveItem(originalValue);
+  };
+
+  return [
+    item,
+    saveItem,
+    resetItem
+  ];
+}
+
+function App() {
   // Estados
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, saveTodos, resetTodos] = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
   // Estados derivados
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
@@ -68,15 +88,6 @@ function App() {
     saveTodos(newTodos);
   };
 
-  const saveTodos = (newTodos) => {
-    setTodos(newTodos);
-    localStorage.setItem('TODOS_V1', JSON.stringify(newTodos));
-  };
-
-  const resetTodos = () => {
-    saveTodos(getOriginal());
-  };
-
   return (
     <div className='container-fluid pt-3'>
       <Card>
@@ -97,7 +108,7 @@ function App() {
           </Col>
           <Col className='col-6 mt-2' md="auto">
             <TodoReset
-              onReset={() => resetTodos()}
+              onReset={() => resetTodos(getOriginal())}
             />
           </Col>
         </Row>
