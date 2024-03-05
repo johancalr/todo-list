@@ -6,8 +6,8 @@ import { TodoItem }    from '../TodoItem/index.js';
 import { TodoCreate }  from '../TodoCreate/index.js';
 import { TodoReset } from '../TodoReset/index.js';
 import { TodoLoading } from '../TodoLoading/index.js';
-import { TodoError } from '../TodoError/inde.js';
-import { TodoEmpty } from '../TodoEmpty/inde.js';
+import { TodoError } from '../TodoError/index.js';
+import { TodoEmpty } from '../TodoEmpty/index.js';
 import { Card, Row, Col } from 'react-bootstrap';
 import './App.css';
 function AppUI({
@@ -29,7 +29,7 @@ function AppUI({
           <b>ToDo List</b>
         </Card.Header>
 
-        <TodoCounter completed={completedTodos} total={totalTodos} loading={loading}/>
+        <TodoCounter completed={completedTodos} total={totalTodos} loading={loading} error={error}/>
         <Row className="justify-content-center mx-2 gx-2">
           <Col className='col-12 mt-2' md={6}>
             <TodoSearch
@@ -50,8 +50,8 @@ function AppUI({
         <TodoList>
           {loading && <TodoLoading/>}
           {error && <TodoError/>}
-          {(!loading && searchedTodos.length === 0) && <TodoEmpty/>}
-          { searchedTodos.map(todo => (
+          {(!loading && totalTodos === 0) && <TodoEmpty/>}
+          { !error && searchedTodos.map(todo => (
             <TodoItem
               key={todo.id}
               text={todo.text}
