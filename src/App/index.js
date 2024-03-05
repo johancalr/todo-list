@@ -28,7 +28,13 @@ const getOriginal = () => {
 
 function App() {
   // Estados
-  const [todos, saveTodos, resetTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    resetItem: resetTodos,
+    loading,
+    error
+  } = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
   // Estados derivados
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
@@ -59,6 +65,8 @@ function App() {
 
   return (
     <AppUI
+      loading={loading}
+      error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
       searchValue={searchValue}

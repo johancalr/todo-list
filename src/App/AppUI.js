@@ -8,6 +8,8 @@ import { TodoReset } from '../TodoReset/index.js';
 import { Card, Row, Col } from 'react-bootstrap';
 import './App.css';
 function AppUI({
+  loading,
+  error,
   completedTodos,
   totalTodos,
   searchValue,
@@ -43,7 +45,10 @@ function AppUI({
         </Row>
 
         <TodoList>
-          {searchedTodos.map(todo => (
+          {loading && <p>Cargando...</p>}
+          {error && <p>Error!!</p>}
+          {(!loading && searchedTodos.length === 0) && <p>!Crea tu primer TODO!</p>}
+          { searchedTodos.map(todo => (
             <TodoItem
               key={todo.id}
               text={todo.text}
