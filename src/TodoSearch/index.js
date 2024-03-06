@@ -1,7 +1,12 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import { TodoContext } from "../TodoContext";
 
-function TodoSearch({searchValue, setSearchValue}) {
+function TodoSearch() {
+  const {
+    searchValue,
+    setSearchValue
+  } = React.useContext(TodoContext);
   return (
     <Form.Control
       type="text"
@@ -10,7 +15,6 @@ function TodoSearch({searchValue, setSearchValue}) {
       value={searchValue}
       onChange={(event) => {
         setSearchValue(event.target.value);
-        console.log(`"${event.target.value}"`);
       }}
     ></Form.Control>
   );
