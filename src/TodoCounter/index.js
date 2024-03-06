@@ -1,7 +1,15 @@
 import { Col, Row } from "react-bootstrap";
 import { TodoLoader } from "../TodoLoader";
+import React from "react";
+import { TodoContext } from "../TodoContext";
 
-function TodoCounter({ completed, total, loading, error }) {
+function TodoCounter() {
+  const {
+    completedTodos: completed,
+    totalTodos: total,
+    loading,
+    error
+  } = React.useContext(TodoContext)
   let message = "";
   if (total === 0)
     message = 'You have no TODOS yet';

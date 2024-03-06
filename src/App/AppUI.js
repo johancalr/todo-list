@@ -1,4 +1,5 @@
 import React from 'react';
+import { TodoContext } from '../TodoContext/index.js';
 import { TodoCounter } from '../TodoCounter/index.js';
 import { TodoSearch }  from '../TodoSearch/index.js';
 import { TodoList }    from '../TodoList/index.js';
@@ -10,18 +11,15 @@ import { TodoError } from '../TodoError/index.js';
 import { TodoEmpty } from '../TodoEmpty/index.js';
 import { Card, Row, Col } from 'react-bootstrap';
 import './App.css';
-function AppUI({
-  loading,
-  error,
-  completedTodos,
-  totalTodos,
-  searchValue,
-  setSearchValue,
-  completeTodo,
-  deleteTodo,
-  resetTodos,
-  searchedTodos
-}) {
+function AppUI() {
+  const {
+    loading,
+    error,
+    totalTodos,
+    completeTodo,
+    deleteTodo,
+    searchedTodos
+  } = React.useContext(TodoContext);
   return (
     <div className='container-fluid pt-3'>
       <Card>
@@ -29,21 +27,16 @@ function AppUI({
           <b>ToDo List</b>
         </Card.Header>
 
-        <TodoCounter completed={completedTodos} total={totalTodos} loading={loading} error={error}/>
+        <TodoCounter/>
         <Row className="justify-content-center mx-2 gx-2">
           <Col className='col-12 mt-2' md={6}>
-            <TodoSearch
-              searchValue={searchValue}
-              setSearchValue={setSearchValue}
-            />
+            <TodoSearch/>
           </Col>
           <Col className='col-6 mt-2' md="auto">
             <TodoCreate />
           </Col>
           <Col className='col-6 mt-2' md="auto">
-            <TodoReset
-              onReset={resetTodos}
-            />
+            <TodoReset/>
           </Col>
         </Row>
 
