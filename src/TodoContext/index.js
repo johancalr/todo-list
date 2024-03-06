@@ -9,11 +9,11 @@ function TodoProvider({ children }) {
   const getOriginal = () => {
     return [
       new todoItem(1, 'Cortar cebolla',          false),
-      new todoItem(2, 'Tomar curso de React Js', true),
+      new todoItem(4, 'Renunciar a la chamba :3',true),
       new todoItem(3, 'Llorar con la llorona',   false),
-      new todoItem(4, 'Renunciar a la chamba',   true),
+      new todoItem(2, 'Tomar curso de React Js', true),
       new todoItem(5, 'Graduarme',               false),
-      new todoItem(6, 'Cantar una canción',      false)
+      new todoItem(6, 'Componer una canción',    true)
     ];
   }
 
@@ -26,6 +26,7 @@ function TodoProvider({ children }) {
     error
   } = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
+  const [openModal, setOpenModal]     = React.useState(false);
   // Estados derivados
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos     = todos.length;
@@ -51,6 +52,12 @@ function TodoProvider({ children }) {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
+  const addTodo = (todoText) => {
+    const newTodos = [...todos];
+    const todoId   = todos.length > 0 ? (todos[todos.length - 1].id +1 ) : 1; // Obtiene el id del nuevo todo
+    newTodos.push(new todoItem(todoId, todoText, false));
+    saveTodos(newTodos);
+  }
   const resetTodos = () => {
     resetTodoitems(getOriginal());
   }
@@ -67,7 +74,10 @@ function TodoProvider({ children }) {
         completeTodo,
         deleteTodo,
         resetTodos,
-        searchedTodos
+        searchedTodos,
+        openModal,
+        setOpenModal,
+        addTodo
       }}
     >
       { children }

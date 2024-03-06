@@ -9,6 +9,8 @@ import { TodoReset } from '../TodoReset/index.js';
 import { TodoLoading } from '../TodoLoading/index.js';
 import { TodoError } from '../TodoError/index.js';
 import { TodoEmpty } from '../TodoEmpty/index.js';
+import { TodoModal } from '../TodoModal/index.js';
+import { TodoCreateModal } from '../TodoCreateModal/index.js';
 import { Card, Row, Col } from 'react-bootstrap';
 import './App.css';
 function AppUI() {
@@ -54,6 +56,10 @@ function AppUI() {
             />
           ))}
         </TodoList>
+
+        <TodoModal>
+          <TodoCreateModal/>
+        </TodoModal>
 
       </Card>
     </div>
