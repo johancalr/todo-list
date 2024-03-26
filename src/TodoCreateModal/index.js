@@ -23,7 +23,7 @@ function TodoCreateModal() {
 
     <Modal show={openModal} onHide={()=> setOpenModal(false)}>
     <Modal.Header closeButton>
-      <Modal.Title className='w-100 text-center lh-1'>Create TODOs</Modal.Title>
+      <Modal.Title className='w-100 text-center lh-1'>Create To-Do</Modal.Title>
     </Modal.Header>
     <Modal.Body>
       <Form>
@@ -35,6 +35,7 @@ function TodoCreateModal() {
             className="text-end"
             value={todoDescription}
             onChange={(event) => setTodoDescription(event.target.value)}
+            autoFocus
           />
         </Form.Group>
       </Form>
@@ -47,7 +48,8 @@ function TodoCreateModal() {
         Close
       </Button>
       <Button
-        variant="primary"
+        className="text-white"
+        variant="lime"
         onClick={onAddTodo}
         >
         Add Todo

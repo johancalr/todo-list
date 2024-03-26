@@ -34,7 +34,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://johancalr.github.io/todo-list",
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }

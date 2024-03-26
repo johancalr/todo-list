@@ -3,7 +3,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 
 function TodoItem(props) {
   return (
-    <ListGroup.Item action variant="success" as="div">
+    <ListGroup.Item action as="div">
       <Row>
         <Col className="col-auto fs-4 lh-1">
           <Form.Check
@@ -18,7 +18,7 @@ function TodoItem(props) {
         <Col className="col-auto">
           <Button
             size="sm"
-            className="py-0 px-1 lh-1 bg-pink border-0"
+            className="py-0 px-1 lh-1 border-0 bg-red"
             variant="danger"
             onClick={props.onDelete}>
             <TiDeleteOutline className="fs-4" />
