@@ -38,18 +38,18 @@ Web application created throughout the React js course from Platzi
 
 <div align="center">
   <a href="https://johancalr.github.io/todo-list">
-    <img src="https://drive.google.com/uc?export=download&id=1yynnkFUn9Iu8kmHxvle4ZVHVA4SLyY3B" alt="Loading" width="420"/>
+    <img src="https://drive.google.com/uc?export=download&id=1yynnkFUn9Iu8kmHxvle4ZVHVA4SLyY3B" alt="Loading" width="410"/>
   </a>
   <a href="https://johancalr.github.io/todo-list">
-    <img src="https://drive.google.com/uc?export=download&id=1Dvft8Os1Uy3XhsC7yIsfxlqa7zRdwoCt" alt="Listing" width="420"/>
+    <img src="https://drive.google.com/uc?export=download&id=1Dvft8Os1Uy3XhsC7yIsfxlqa7zRdwoCt" alt="Listing" width="410"/>
   </a>
 </div>
 <hr>
 <div align="center">
   <a href="https://johancalr.github.io/todo-list">
-    <img src="https://drive.google.com/uc?export=download&id=1zjDK-MtCcORuwy1wC2Dcn1GJCn6PC4wx" alt="Validation" width="420"/>
+    <img src="https://drive.google.com/uc?export=download&id=1zjDK-MtCcORuwy1wC2Dcn1GJCn6PC4wx" alt="Validation" width="410"/>
   </a>
   <a href="https://johancalr.github.io/todo-list">
-    <img src="https://drive.google.com/uc?export=download&id=1rmJVO_aDtHRWKjhZ6xMnHVIQRAOnPy1O" alt="Description" width="420"/>
+    <img src="https://drive.google.com/uc?export=download&id=1rmJVO_aDtHRWKjhZ6xMnHVIQRAOnPy1O" alt="Description" width="410"/>
   </a>
 </div>
