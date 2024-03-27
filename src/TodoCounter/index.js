@@ -12,7 +12,7 @@ function TodoCounter() {
   } = React.useContext(TodoContext)
   let message = "";
   if (total === 0)
-    message = 'You have no TODOS yet';
+    message = 'You have no To-Dos yet';
   else if (completed < total)
     message = `${completed} of ${total} TODOs completed`;
   else

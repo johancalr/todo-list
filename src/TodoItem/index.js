@@ -4,7 +4,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 function TodoItem(props) {
   return (
     <ListGroup.Item action as="div">
-      <Row>
+      <Row className="align-items-center">
         <Col className="col-auto fs-4 lh-1">
           <Form.Check
             role="button"
@@ -13,7 +13,7 @@ function TodoItem(props) {
           ></Form.Check>
         </Col>
         <Col>
-          <span>{props.text}</span>
+          <span className="text-pre">{props.text}</span>
         </Col>
         <Col className="col-auto">
           <Button

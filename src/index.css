@@ -1,12 +1,6 @@
-/* Estilos Personales */
-.bg-violet {
-  background-color: #8a2be2;
-}
+/* Personal Styles */
 .text-violet {
   color: #8a2be2;
-}
-.border-violet {
-  border-color: #8a2be2;
 }
 .bg-soft-cake {
   background-color: #f2f1e6;
@@ -17,14 +11,10 @@
 .bg-red {
   background-color: #d36379;
 }
-.btn-lime {
-  background-color: #94e22b;
+.text-pre {
+  white-space: pre;
 }
-.btn-lime:hover, .btn-lime:focus, .btn-lime:active {
-  background-color: #77c411 !important;
-  border-color: #77c411 !important;
-}
-/* Modification for bootstrap */
+/* Bootstrap modifications */
 .form-check-input {
   margin-top: 0;
 }
@@ -43,7 +33,11 @@
 .list-group-item-action:focus, .list-group-item-action:hover {
   background-color: #eee5bc;
 }
-/*
-#5ab9a3
-#8f89d3
-*/
+/* Bootstrap adaptations */
+.btn-lime {
+  background-color: #94e22b;
+}
+.btn-lime:hover, .btn-lime:focus, .btn-lime:active {
+  background-color: #77c411 !important;
+  border-color: #77c411 !important;
+}

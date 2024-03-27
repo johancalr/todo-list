@@ -8,7 +8,7 @@ function TodoEmpty() {
   return (
     <Alert className="text-center bg-soft-cake" role="button" onClick={() => setOpenModal(true)}>
       <IoMdCheckboxOutline className="fs-4 me-2"/>
-      Create your first TODO
+      Create your first To-Do
     </Alert>
   );
 }

@@ -15,9 +15,13 @@ function TodoCreateModal() {
   const [todoDescription, setTodoDescription] = React.useState('');
 
   const onAddTodo = () => {
-    addTodo(todoDescription);
-    setOpenModal(false);
-    setTodoDescription('');
+    if (todoDescription.length >= 3) {
+      addTodo(todoDescription);
+      setOpenModal(false);
+      setTodoDescription('');
+    } else {
+      document.getElementById('todoDescription').focus();
+    }
   };
   return (
 
@@ -29,6 +33,7 @@ function TodoCreateModal() {
       <Form>
         <Form.Group>
           <Form.Control
+            id="todoDescription"
             as="textarea"
             rows={3}
             placeholder="Describe your new task"
@@ -37,6 +42,10 @@ function TodoCreateModal() {
             onChange={(event) => setTodoDescription(event.target.value)}
             autoFocus
           />
+          <Form.Text className="text-muted">
+            <span className={`float-end ${todoDescription.length>=3 ? 'text-success' : 'text-warning'}`}>{todoDescription.length}/3</span>
+            {todoDescription.length<3 && <span className="float-start">Description must be 3 or more characters</span>}
+          </Form.Text>
         </Form.Group>
       </Form>
     </Modal.Body>

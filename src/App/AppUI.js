@@ -5,7 +5,6 @@ import { TodoSearch }  from '../TodoSearch/index.js';
 import { TodoList }    from '../TodoList/index.js';
 import { TodoItem }    from '../TodoItem/index.js';
 import { TodoCreate }  from '../TodoCreate/index.js';
-import { TodoReset } from '../TodoReset/index.js';
 import { TodoLoading } from '../TodoLoading/index.js';
 import { TodoError } from '../TodoError/index.js';
 import { TodoEmpty } from '../TodoEmpty/index.js';
@@ -39,14 +38,8 @@ function AppUI() {
             <Col className='col-6 mt-2' md="auto">
               <TodoCreate />
             </Col>
-            <Col className='col-6 mt-2' md="auto">
-              <TodoReset/>
-            </Col>
           </Row>
           
-          <TodoModal>
-            <TodoCreateModal/>
-          </TodoModal>
           <Card.Body className='overflow-y-auto my-2 p-0'>
             <TodoList>
               {loading && <TodoLoading/>}
@@ -63,6 +56,10 @@ function AppUI() {
               ))}
             </TodoList>
           </Card.Body>
+
+          <TodoModal>
+            <TodoCreateModal/>
+          </TodoModal>
         </Card>
       </div>
     </div>
