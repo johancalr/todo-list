@@ -1,6 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { TodoContext } from "../TodoContext";
+import { TodoContext } from "../../Context/TodoContext";
 
 function TodoSearch() {
   const {
@@ -11,7 +11,7 @@ function TodoSearch() {
     <Form.Control
       type="text"
       placeholder="Buscar tarea"
-      className="text-end"
+      className="text-end shadow-none"
       value={searchValue}
       onChange={(event) => {
         setSearchValue(event.target.value);

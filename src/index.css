@@ -1,13 +1,43 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Personal Styles */
+.text-violet {
+  color: #233553;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-soft-cake {
+  background-color: #f2f1e6;
+}
+.bg-cake {
+  background-color: #eee5bc;
+}
+.bg-red {
+  background-color: #d36379;
+}
+.text-pre {
+  white-space: pre;
+}
+/* Bootstrap modifications */
+.form-check-input {
+  margin-top: 0;
+}
+.form-check-input:checked {
+  background-color: #8a2be2;
+  border-color: rgb(138, 43, 226);
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 .25rem rgba(138, 43, 226,.25);
+  border-color: rgba(138, 43, 226, .5);
+}
+.list-group-item {
+  background-color: #f2f1e6;
+  user-select: none;
+}
+.list-group-item-action:focus, .list-group-item-action:hover {
+  background-color: #eee5bc;
+}
+/* Bootstrap adaptations */
+.btn-lime {
+  background-color: #94e22b;
+}
+.btn-lime:hover, .btn-lime:focus, .btn-lime:active {
+  background-color: #77c411 !important;
+  border-color: #77c411 !important;
 }

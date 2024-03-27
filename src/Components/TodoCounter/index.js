@@ -1,7 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import { TodoLoader } from "../TodoLoader";
 import React from "react";
-import { TodoContext } from "../TodoContext";
+import { TodoContext } from "../../Context/TodoContext";
 
 function TodoCounter() {
   const {
@@ -12,7 +12,7 @@ function TodoCounter() {
   } = React.useContext(TodoContext)
   let message = "";
   if (total === 0)
-    message = 'You have no TODOS yet';
+    message = 'You have no To-Dos yet';
   else if (completed < total)
     message = `${completed} of ${total} TODOs completed`;
   else

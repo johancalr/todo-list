@@ -1,27 +1,15 @@
 import React from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { todoItem } from '../interfaces/todoInterface.ts';
+import { useLocalStorage } from "../../hooks/useLocalStorage.js";
+import { todoItem } from '../../interfaces/todoInterface.ts';
 
 const TodoContext = React.createContext();
 
 function TodoProvider({ children }) {
 
-  const getOriginal = () => {
-    return [
-      new todoItem(1, 'Cortar cebolla',          false),
-      new todoItem(4, 'Renunciar a la chamba :3',true),
-      new todoItem(3, 'Llorar con la llorona',   false),
-      new todoItem(2, 'Tomar curso de React Js', true),
-      new todoItem(5, 'Graduarme',               false),
-      new todoItem(6, 'Componer una canción',    true)
-    ];
-  }
-
   // Estados
   const {
     item: todos,
     saveItem: saveTodos,
-    resetItem: resetTodoitems,
     loading,
     error
   } = useLocalStorage('TODOS_V1', []);
@@ -58,9 +46,6 @@ function TodoProvider({ children }) {
     newTodos.push(new todoItem(todoId, todoText, false));
     saveTodos(newTodos);
   }
-  const resetTodos = () => {
-    resetTodoitems(getOriginal());
-  }
 
   return (
     <TodoContext.Provider
@@ -73,7 +58,6 @@ function TodoProvider({ children }) {
         setSearchValue,
         completeTodo,
         deleteTodo,
-        resetTodos,
         searchedTodos,
         openModal,
         setOpenModal,
