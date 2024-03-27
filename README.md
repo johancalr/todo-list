@@ -1,75 +1,55 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# ![imagen](https://github.com/johancalr/todo-list/assets/31641359/17a294fe-1904-4600-83d9-aa09150e2273) &nbsp; Welcome to my **To-Do List** Manager
 
-¡Hola, Platzinauta!
+Web application created throughout the React js course from Platzi
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+### 🛠 Principal technologies
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+<p>
+  <img src="https://img.shields.io/badge/-React-05122A?style=flat&logo=react" height="25" alt="ReactJs">
+  <img src="https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript" height="25" alt="TypeScript">
+  <img src="https://img.shields.io/badge/-Bootstrap-05122A?style=flat&logo=bootstrap" height="25" alt="Bootstrap">
+</p>
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+🚀 **Deployed on:**
+<br>
+<a href="https://johancalr.github.io/todo-list">
+  <img src="https://img.shields.io/badge/https://johancalr.github.io/todo--list-eee5bc?logo=github&labelColor=181717" height="23" alt="github"/>
+</a>
 
-## Getting Started with Create React App
+✨ **Logos and colors from:**
+<br>
+<a href="https://www.reshot.com">
+  <img src="https://img.shields.io/badge/R-reshot.com-7D929E?&labelColor=181717" height="23" alt="reshot.com"/>
+</a>
+<a href="https://colors.muz.li">
+  <img src="https://img.shields.io/badge/M-colors.muz.li-3adbb9?&labelColor=181717" height="23" alt="colors.muz.li"/>
+</a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📚 **Additional libraries:**
+<br>
+<a href="https://react-bootstrap.netlify.app">
+  <img src="https://img.shields.io/badge/R.B.-React--Bootstrap-61DAFB?labelColor=181717" height="23" alt="react-bootstrap"/>
+</a>
+<a href="https://react-icons.github.io/react-icons">
+  <img src="https://img.shields.io/badge/R.I.-React--Icons-e91e63?labelColor=181717" height="23" alt="react-icons"/>
+</a>
 
-## Available Scripts
+#### ✅ Some views
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  <a href="https://johancalr.github.io/todo-list">
+    <img src="https://drive.google.com/uc?export=download&id=1yynnkFUn9Iu8kmHxvle4ZVHVA4SLyY3B" alt="Loading" width="420"/>
+  </a>
+  <a href="https://johancalr.github.io/todo-list">
+    <img src="https://drive.google.com/uc?export=download&id=1Dvft8Os1Uy3XhsC7yIsfxlqa7zRdwoCt" alt="Listing" width="420"/>
+  </a>
+</div>
+<hr>
+<div align="center">
+  <a href="https://johancalr.github.io/todo-list">
+    <img src="https://drive.google.com/uc?export=download&id=1zjDK-MtCcORuwy1wC2Dcn1GJCn6PC4wx" alt="Validation" width="420"/>
+  </a>
+  <a href="https://johancalr.github.io/todo-list">
+    <img src="https://drive.google.com/uc?export=download&id=1rmJVO_aDtHRWKjhZ6xMnHVIQRAOnPy1O" alt="Description" width="420"/>
+  </a>
+</div>
