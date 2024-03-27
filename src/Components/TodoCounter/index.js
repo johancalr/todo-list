@@ -1,7 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import { TodoLoader } from "../TodoLoader";
 import React from "react";
-import { TodoContext } from "../TodoContext";
+import { TodoContext } from "../../Context/TodoContext";
 
 function TodoCounter() {
   const {

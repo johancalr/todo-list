@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoContext } from '../TodoContext/index.js';
+import { TodoContext } from '../../Context/TodoContext/index.js';
 import { TodoCounter } from '../TodoCounter/index.js';
 import { TodoSearch }  from '../TodoSearch/index.js';
 import { TodoList }    from '../TodoList/index.js';

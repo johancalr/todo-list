@@ -1,6 +1,6 @@
 import React from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { todoItem } from '../interfaces/todoInterface.ts';
+import { useLocalStorage } from "../../hooks/useLocalStorage.js";
+import { todoItem } from '../../interfaces/todoInterface.ts';
 
 const TodoContext = React.createContext();
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Alert from 'react-bootstrap/Alert';
 import { IoMdCheckboxOutline } from "react-icons/io";
-import { TodoContext } from "../TodoContext";
+import { TodoContext } from "../../Context/TodoContext";
 
 function TodoEmpty() {
   const {setOpenModal} = React.useContext(TodoContext);
