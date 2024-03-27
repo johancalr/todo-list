@@ -11,7 +11,7 @@ function TodoSearch() {
     <Form.Control
       type="text"
       placeholder="Buscar tarea"
-      className="text-end"
+      className="text-end shadow-none"
       value={searchValue}
       onChange={(event) => {
         setSearchValue(event.target.value);

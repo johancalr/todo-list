@@ -22,7 +22,7 @@ function TodoCreateModal() {
   return (
 
     <Modal show={openModal} onHide={()=> setOpenModal(false)}>
-    <Modal.Header closeButton>
+    <Modal.Header closeButton className='bg-soft-cake'>
       <Modal.Title className='w-100 text-center lh-1'>Create To-Do</Modal.Title>
     </Modal.Header>
     <Modal.Body>
@@ -32,7 +32,7 @@ function TodoCreateModal() {
             as="textarea"
             rows={3}
             placeholder="Describe your new task"
-            className="text-end"
+            className="text-end shadow-none"
             value={todoDescription}
             onChange={(event) => setTodoDescription(event.target.value)}
             autoFocus
@@ -40,17 +40,19 @@ function TodoCreateModal() {
         </Form.Group>
       </Form>
     </Modal.Body>
-    <Modal.Footer>
+    <Modal.Footer className='bg-soft-cake py-1'>
       <Button
-        variant="secondary"
+        variant='secondary'
         onClick={()=> setOpenModal(false)}
+        size='sm'
         >
         Close
       </Button>
       <Button
-        className="text-white"
-        variant="lime"
+        className='text-white'
+        variant='lime'
         onClick={onAddTodo}
+        size='sm'
         >
         Add Todo
       </Button>
