@@ -1,6 +1,6 @@
 /* Personal Styles */
 .text-violet {
-  color: #233553;
+  color: #8a2be2;
 }
 .bg-soft-cake {
   background-color: #f2f1e6;
@@ -27,7 +27,7 @@
   border-color: rgba(138, 43, 226, .5);
 }
 .list-group-item {
-  background-color: #f2f1e6;
+  background-color: #fffef6;
   user-select: none;
 }
 .list-group-item-action:focus, .list-group-item-action:hover {
@@ -40,4 +40,7 @@
 .btn-lime:hover, .btn-lime:focus, .btn-lime:active {
   background-color: #77c411 !important;
   border-color: #77c411 !important;
+}
+.bg-semitransparent {
+  background-color: rgba(255, 255, 255, 0.5);
 }
