@@ -22,11 +22,11 @@ function AppUI() {
   } = React.useContext(TodoContext);
   return (
     <div className='bg-soft-cake'>
-      <img src='/background.svg' alt='Background' className='position-absolute w-100 h-100 object-fit-cover'/>
+      <img src='./background.svg' alt='Background' className='position-absolute w-100 h-100 object-fit-cover'/>
       <div className='container py-3 py-sm-5 px-sm-5 vh-100'>
         <Card className='border-0 h-100 bg-light'>
           <Card.Header className='d-flex justify-content-center text-violet bg-cake'>
-            <img src='/favicon.svg' alt='Icon'/>
+            <img src='./favicon.svg' alt='Icon'/>
             &nbsp;
             <b>To-Do List</b>
           </Card.Header>
