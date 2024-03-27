@@ -19,7 +19,7 @@ function TodoCounter() {
     message = 'You have completed all your TODOs';
   return (
     <Row className="justify-content-center my-2 gx-0">
-      <Col className="col-auto border border-1 rounded fs-4">
+      <Col className="col-auto border border-1 rounded fs-4 bg-white">
         { (loading && !error) && <TodoLoader opacity={100}>Counting todos</TodoLoader> }
         { (!loading && !error) && <span className="px-2">{message}</span> }
         { error && <span className="px-2">No todos found</span>}

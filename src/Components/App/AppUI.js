@@ -24,12 +24,13 @@ function AppUI() {
     <div className='bg-soft-cake'>
       <img src='./background.svg' alt='Background' className='position-absolute w-100 h-100 object-fit-cover'/>
       <div className='container py-3 py-sm-5 px-sm-5 vh-100'>
-        <Card className='border-0 h-100 bg-light'>
+        <Card className='h-100 bg-semitransparent shadow'>
           <Card.Header className='d-flex justify-content-center text-violet bg-cake'>
             <img src='./favicon.svg' alt='Icon'/>
             &nbsp;
             <b>To-Do List</b>
           </Card.Header>
+
           <TodoCounter/>
           <Row className="justify-content-center mx-2 gx-2">
             <Col className='col-12 mt-2' md={6}>

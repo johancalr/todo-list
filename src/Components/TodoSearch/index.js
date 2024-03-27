@@ -10,7 +10,7 @@ function TodoSearch() {
   return (
     <Form.Control
       type="text"
-      placeholder="Buscar tarea"
+      placeholder="Search To-Do"
       className="text-end shadow-none"
       value={searchValue}
       onChange={(event) => {
